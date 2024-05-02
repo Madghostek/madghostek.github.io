@@ -1,15 +1,120 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>A</title>
-	<meta content="javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/"/+/onmouseover=1/+/[*/[]/+alert(332)//'>xdxdddx" property="og:title" />
-    	<meta content="javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/"/+/onmouseover=1/+/[*/[]/+alert(13144)//'>xsxsxssx" property="og:description" />
-    	<meta content="D" property="og:url" />
-    	<meta content="E" property="og:image" />
-    	<meta content="F" data-react-helmet="true" name="theme-color" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spinning 3D Cube</title>
+<style>
+  .container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin2 5s linear infinite;
+  }
+  
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .spinning-text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 4s linear infinite;
+  }
+
+  .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px;
+    color: #3498db;
+    transform-origin: center;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .front {
+    transform: translateZ(100px);
+  }
+  
+  .back {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  
+  @keyframes spin2 {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+</style>
 </head>
 <body>
-	
+  <div class="spinning-text">
+    <div class="text">Who needs 3d libraries</div>
+  </div>
+<div class="container">
+  <div class="cube">
+    <div class="face front"><img src=https://static.wikia.nocookie.net/silly-cat/images/4/4d/Mr._Fresh.png/revision/latest?cb=20240117170647/></div>
+    <div class="face back"><img src=https://static.wikia.nocookie.net/silly-cat/images/4/4d/Mr._Fresh.png/revision/latest?cb=20240117170647/></div>
+    <div class="face top"><img src=https://static.wikia.nocookie.net/silly-cat/images/4/4d/Mr._Fresh.png/revision/latest?cb=20240117170647/></div>
+    <div class="face bottom"><img src=https://static.wikia.nocookie.net/silly-cat/images/4/4d/Mr._Fresh.png/revision/latest?cb=20240117170647/></div>
+    <div class="face left"><img src=https://static.wikia.nocookie.net/silly-cat/images/4/4d/Mr._Fresh.png/revision/latest?cb=20240117170647/></div>
+    <div class="face right"><img src=https://static.wikia.nocookie.net/silly-cat/images/4/4d/Mr._Fresh.png/revision/latest?cb=20240117170647/></div>
+  </div>
+</div>
 </body>
 </html>
